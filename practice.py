@@ -6,9 +6,6 @@ def solution(my_string):
         if i not in [0, 1] and result != 0:
             result *= i
             ouput_string += f" X {i}"
-        elif i == 1 or result == 0:
-            result += i
-            ouput_string = ouput_string + f" + {i}"
         else:
             result += i
             ouput_string += f" + {i}"
