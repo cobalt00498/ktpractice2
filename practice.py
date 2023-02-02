@@ -9,7 +9,8 @@ def solution(my_string):
         elif i == 1 or result == 0:
             result += i
             ouput_string = ouput_string + f" + {i}"
-        elif i == 0:
+        else:
+            result += i
             ouput_string += f" + {i}"
     return ouput_string + f" = {result}"
 
