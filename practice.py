@@ -1,16 +1,8 @@
-def solution(my_string):
-    my_numbers = list(map(int, list(my_string)))
-    result = my_numbers[0]
-    ouput_string = str(my_numbers[0])
-    for i in my_numbers[1:]:
-        if i not in [0, 1] and result != 0:
-            result *= i
-            ouput_string += f" X {i}"
-        else:
-            result += i
-            ouput_string += f" + {i}"
-    return ouput_string + f" = {result}"
-
-print(solution("02984"))
-print(solution("567"))
-            
+def solution(lottos, win_nums):
+    ranks_rules = {6:1, 5:2, 4:3, 3:4, 2:5, 1:6, 0:6}
+    undetemined = lottos.count(0)
+    winning = 0
+    for i in lottos:
+        if i in win_nums:
+            winning += 1
+    return [ranks_rules[winning+undetemined], ranks_rules[winning]]
