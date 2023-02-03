@@ -1,8 +1,4 @@
-def solution(numbers):
-    set_numbers = set(numbers)
-    result = 0
-    for n in range(0, 10):
-        if n not in set_numbers:
-            result += n
-    return result
-print(solution([1,2,3,4,6,7,8,0]))
+def solution(store, customer):
+    return list(map(lambda x: x in store, customer))
+
+print(solution([2,3,7,8,9], [7,5,9]))
